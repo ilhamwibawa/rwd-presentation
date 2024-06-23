@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>reveal.js</title>
+
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/moon.css">
+
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<iframe src="https://giphy.com/embed/I8ud1WqEc1JS1DhikF" width="480" height="269" style="" frameBorder="0"
+					class="giphy-embed" allowFullScreen></iframe>
+				<h2>Responsive Web Design</h2>
+
+			</section>
+			<section>
+				<iframe src="https://giphy.com/embed/wpvrvjjDf7uRoM61w5" width="300" height="300" style="" frameBorder="0"
+					class="giphy-embed" allowFullScreen></iframe>
+				<p>Sebuah pendekatan yang menyarankan agar proses perancangan dan pembangunan sebuah web app harus merespon
+					terhadap perilaku pengguna berdasarkan dari ukuran layar, platform dan orientasi layar.</p>
+			</section>
+			<section data-background-image="./assets/fi-responsive-web-design.png.webp" data-background-size="contain">
+			</section>
+			<section data-background-image="./assets/android-vs-iphone.png" data-background-size="contain">
+			</section>
+			<section data-background-image="./assets/monitor.png" data-background-size="contain">
+			</section>
+			<section>
+				<iframe src="https://giphy.com/embed/3ohs64wSP634vhRife" width="480" height="271" style="" frameBorder="0"
+					class="giphy-embed" allowFullScreen></iframe>
+				<h2>Principles of responsive web design</h2>
+			</section>
+			<section>
+				<iframe src="https://giphy.com/embed/bz9PIxJMQtkO943XeS" width="480" height="360" style="" frameBorder="0"
+					class="giphy-embed" allowFullScreen></iframe>
+				<h3>1. Adaptive vs Responsive Design</h3>
+			</section>
+			<section>
+				<img src="https://miro.medium.com/v2/resize:fit:4800/format:webp/1*-3wqJQI4Ou36nqrtlXmjnQ.png" alt="">
+				<p>https://uxplanet.org</p>
+			</section>
+			<section>
+				<iframe src="https://giphy.com/embed/Fr51PdEf2NxOE" width="480" height="350" style="" frameBorder="0"
+					class="giphy-embed" allowFullScreen></iframe>
+				<h3>2. Viewport & Viewport Meta Tag</h3>
+				<p class="fragment">Area pada halaman web yang terlihat oleh user</p>
+			</section>
+			<section data-background-image="./assets/viewport.png" data-background-size="contain">
+			</section>
+			<section data-auto-animate>
+				<p>Viewport Meta Tag</p>
+				<pre
+					data-id="code-animation"><code data-trim data-line-numbers>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code></pre>
+			</section>
+			<section data-auto-animate>
+				<p>Viewport Meta Tag</p>
+				<pre data-id="code-animation"><code data-trim data-no-escape  data-line-numbers="3">
+					&lt;html&gt;
+							&lt;head&gt;
+									&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+									&lt;title&gt;My HTML 5 Page&lt;/title&gt;
+							&lt;/head&gt;
+							&lt;body&gt;
+									...
+							&lt;/body&gt;
+					&lt;/html&gt;
+</code></pre>
+
+				<small><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag">
+						https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag
+					</a></small>
+			</section>
+			<section>
+				<img src="./assets/with-metatag.png" width="600" alt="">
+				<p>Dengan / tanpa viewport meta tag</p>
+			</section>
+			<section>
+				<h2>3. Breakpoints</h2>
+			</section>
+			<section>
+				<ul>
+					<li>Extra small device / Potrait phone
+
+						<ul>
+							<li>
+								<strong>
+									< 576px </strong>
+							</li>
+						</ul>
+					</li>
+					<li>Small device / Landscape phone
+
+						<ul>
+							<li>
+								<strong>
+									≥ 576px </strong>
+							</li>
+						</ul>
+					</li>
+
+					<li>Medium device / Tablet
+
+						<ul>
+							<li>
+								<strong>
+									≥ 768px </strong>
+							</li>
+						</ul>
+					</li>
+
+					<li>Large device / Desktop
+
+						<ul>
+							<li>
+								<strong>
+									≥ 992px </strong>
+							</li>
+						</ul>
+					</li>
+
+					<li>Extra large device / Large desktop
+
+						<ul>
+							<li>
+								<strong>
+									≥ 1200px </strong>
+							</li>
+						</ul>
+					</li>
+
+					<li>XX-Large Device
+
+						<ul>
+							<li>
+								<strong>
+									≥ 1400px </strong>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>4. Media query</h2>
+			</section>
+
+			<section>
+				<pre><code data-trim data-no-escape>
+					@media (min-width: 576px) { ... }
+
+					@media (min-width: 768px) { ... }
+
+					@media (min-width: 992px) { ... }
+
+					@media (min-width: 1200px) { ... }
+
+					@media (min-width: 1400px) { ... }
+					</code>
+				</pre>
+			</section>
+
+			<section>
+				<h2>5. Fluid layouts</h2>
+			</section>
+
+			<section>
+				<div style="display: flex; gap: 10px;">
+					<div>
+						<img src="./assets/fixed.png" />
+						<p>Fixed layout</p>
+					</div>
+
+					<div>
+						<img src="./assets/fluid.png" />
+						<p>Fluid layout</p>
+					</div>
+			</section>
+
+			<section>
+				<div style="display: flex; gap: 10px;">
+					<div style="width: 100%;">
+						<pre><code data-trim data-no-escape>
+							.content { width: 960px; }
+							.left { width: 520px }
+							.middle, .right { width: 200px }
+							</code>
+						</pre>
+						<p>Fixed layout</p>
+					</div>
+
+					<div style="width: 100%;">
+						<pre><code data-trim data-no-escape>
+							.content { width: 90% }
+							.left { width: 50% }
+							.middle, .right { width: 20% }
+							</code>
+						</pre>
+						<p>Fluid layout</p>
+					</div>
+			</section>
+
+			<section>
+				<h2>6. Relative Units</h2>
+			</section>
+
+			<section>
+				<h4>Relative Units</h4>
+				<ul>
+					<li>%</li>
+					<li>rem & em</li>
+					<li>vw & vh</li>
+					<li>vmin & vmax</li>
+				</ul>
+
+				<div style="margin-top: 20px;">
+					<small><a target="_blank" href="https://www.w3schools.com/cssref/css_units.asp">
+							https://www.w3schools.com/cssref/css_units.asp
+						</a></small>
+				</div>
+			</section>
+
+			<section>
+				<h2>7. Responsive Media</h2>
+			</section>
+
+			<section>
+				<h4>Responsive Media</h4>
+				<ul>
+					<li>Image</li>
+					<li>Video</li>
+				</ul>
+			</section>
+
+			<section>
+				<pre><code data-trim data-line-numbers>
+					.img {
+						width: 800px;
+						height: 800px;
+					}
+				</code></pre>
+
+				<video data-autoplay height="300" src="./assets/fixed-image.mp4" loop></video>
+			</section>
+
+			<section>
+				<pre><code data-trim data-line-numbers>
+					.img {
+						width: 100%;
+						height: 800px;
+						object-fit: cover;
+						object-position: bottom;
+					 }
+				</code></pre>
+
+				<video data-autoplay height="300" src="./assets/relative-image.mp4" loop></video>
+			</section>
+
+			<section>
+				<h2>8. Flexbox</h2>
+			</section>
+
+			<section>
+				<img src="https://i.redd.it/vd9dc7wfk9471.png" alt="">
+			</section>
+
+			<section>
+				<h2>9. Grid</h2>
+			</section>
+			<section>
+				<img src="https://pbs.twimg.com/media/E6WYzliWEAsY1Pz?format=jpg&name=4096x4096" alt="">
+			</section>
+
+			<section>
+				<h2>10. Mobile First Design</h2>
+
+			</section>
+
+			<section>
+				<img src="https://public-images.interaction-design.org/literature/articles/materials/02-04-4-mobile-first.png"
+					alt="">
+			</section>
+
+			<section>
+				<iframe src="https://giphy.com/embed/gjiE1RizLmRCBZ3cbW" width="480" height="360" style="" frameBorder="0"
+					class="giphy-embed" allowFullScreen></iframe>
+			</section>
+
+		</div>
+	</div>
+
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script>
+		// More info about initialization & config:
+		// - https://revealjs.com/initialization/
+		// - https://revealjs.com/config/
+		Reveal.initialize({
+			hash: true,
+
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+		});
+	</script>
+</body>
+
+</html>
